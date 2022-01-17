@@ -1,0 +1,439 @@
+
+C:\Users\upadh>dockerps
+'dockerps' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED         STATUS         PORTS                                                                                                         NAMES
+d8520d07a1fc   catalogapi                                            "dotnet Catalog.API.…"   2 minutes ago   Up 2 minutes   0.0.0.0:50130->80/tcp                                                                                         src_catalog.api_1
+c35f0ec9564b   mongo                                                 "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:27017->27017/tcp                                                                                      catalogdb
+ab39c06ed968   aspnetrunbasics                                       "dotnet AspnetRunBas…"   4 days ago      Up 4 days      443/tcp, 0.0.0.0:8006->80/tcp                                                                                 aspnetrunbasics
+1aab200ad44e   ocelotapigw                                           "dotnet OcelotApiGw.…"   4 days ago      Up 4 days      0.0.0.0:8010->80/tcp                                                                                          ocelotapigw
+5bb4f8c6e566   shoppingaggregator                                    "dotnet Shopping.Agg…"   4 days ago      Up 4 days      0.0.0.0:8005->80/tcp                                                                                          shopping.aggregator
+1c4da7f1c645   orderingapi                                           "dotnet Ordering.API…"   4 days ago      Up 4 days      0.0.0.0:8004->80/tcp                                                                                          ordering.api
+33d3022ac931   basketapi                                             "dotnet Basket.API.d…"   4 days ago      Up 4 days      0.0.0.0:8001->80/tcp                                                                                          basket.api
+b1180d4afefe   docker.elastic.co/kibana/kibana:7.9.2                 "/usr/local/bin/dumb…"   4 days ago      Up 4 days      0.0.0.0:5601->5601/tcp                                                                                        kibana
+6196284b49b8   discountgrpc                                          "dotnet Discount.Grp…"   4 days ago      Up 4 days      0.0.0.0:8003->80/tcp                                                                                          discount.grpc
+625d1e0573bf   discountapi                                           "dotnet Discount.API…"   4 days ago      Up 4 days      0.0.0.0:8002->80/tcp                                                                                          discount.api
+dc7db931c663   dpage/pgadmin4                                        "/entrypoint.sh"         4 days ago      Up 4 days      443/tcp, 0.0.0.0:5050->80/tcp                                                                                 pgadmin
+3c31401bf1f7   redis:alpine                                          "docker-entrypoint.s…"   4 days ago      Up 4 days      0.0.0.0:6379->6379/tcp                                                                                        basketdb
+c50e20aad7c9   portainer/portainer-ce                                "/portainer"             4 days ago      Up 2 minutes   0.0.0.0:9000->9000/tcp, 9443/tcp, 0.0.0.0:8080->8000/tcp                                                      portainer
+b9774db093bf   rabbitmq:3-management-alpine                          "docker-entrypoint.s…"   4 days ago      Up 4 days      4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp   rabbitmq
+7a5b2298aa87   docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   4 days ago      Up 4 days      0.0.0.0:9200->9200/tcp, 9300/tcp                                                                              elasticsearch
+2ee02c6cb8a0   webstatus                                             "dotnet WebStatus.dll"   4 days ago      Up 4 days      0.0.0.0:8007->80/tcp                                                                                          webstatus
+d7f4d5f85b1d   mcr.microsoft.com/mssql/server:2017-latest            "/opt/mssql/bin/nonr…"   4 days ago      Up 12 hours    0.0.0.0:1433->1433/tcp                                                                                        orderdb
+b64fe4cb200f   postgres                                              "docker-entrypoint.s…"   4 days ago      Up 4 days      0.0.0.0:5432->5432/tcp                                                                                        discountdb
+
+C:\Users\upadh>docker stop d8520d07a1fc
+d8520d07a1fc
+
+C:\Users\upadh>docker rm d8520d07a1fc
+d8520d07a1fc
+
+C:\Users\upadh>docker stop c35f
+c35f
+
+C:\Users\upadh>docker rm c35f
+c35f
+
+C:\Users\upadh>docker stop ab39c06ed968
+ab39c06ed968
+
+C:\Users\upadh>docker rm ab39c06ed968
+ab39c06ed968
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED      STATUS              PORTS                                                                                                         NAMES
+1aab200ad44e   ocelotapigw                                           "dotnet OcelotApiGw.…"   4 days ago   Up 4 days           0.0.0.0:8010->80/tcp                                                                                          ocelotapigw
+5bb4f8c6e566   shoppingaggregator                                    "dotnet Shopping.Agg…"   4 days ago   Up 4 days           0.0.0.0:8005->80/tcp                                                                                          shopping.aggregator
+1c4da7f1c645   orderingapi                                           "dotnet Ordering.API…"   4 days ago   Up 4 days           0.0.0.0:8004->80/tcp                                                                                          ordering.api
+33d3022ac931   basketapi                                             "dotnet Basket.API.d…"   4 days ago   Up 4 days           0.0.0.0:8001->80/tcp                                                                                          basket.api
+b1180d4afefe   docker.elastic.co/kibana/kibana:7.9.2                 "/usr/local/bin/dumb…"   4 days ago   Up 4 days           0.0.0.0:5601->5601/tcp                                                                                        kibana
+6196284b49b8   discountgrpc                                          "dotnet Discount.Grp…"   4 days ago   Up 4 days           0.0.0.0:8003->80/tcp                                                                                          discount.grpc
+625d1e0573bf   discountapi                                           "dotnet Discount.API…"   4 days ago   Up 4 days           0.0.0.0:8002->80/tcp                                                                                          discount.api
+dc7db931c663   dpage/pgadmin4                                        "/entrypoint.sh"         4 days ago   Up 4 days           443/tcp, 0.0.0.0:5050->80/tcp                                                                                 pgadmin
+3c31401bf1f7   redis:alpine                                          "docker-entrypoint.s…"   4 days ago   Up 4 days           0.0.0.0:6379->6379/tcp                                                                                        basketdb
+c50e20aad7c9   portainer/portainer-ce                                "/portainer"             4 days ago   Up About a minute   0.0.0.0:9000->9000/tcp, 9443/tcp, 0.0.0.0:8080->8000/tcp                                                      portainer
+b9774db093bf   rabbitmq:3-management-alpine                          "docker-entrypoint.s…"   4 days ago   Up 4 days           4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp   rabbitmq
+7a5b2298aa87   docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   4 days ago   Up 4 days           0.0.0.0:9200->9200/tcp, 9300/tcp                                                                              elasticsearch
+2ee02c6cb8a0   webstatus                                             "dotnet WebStatus.dll"   4 days ago   Up 4 days           0.0.0.0:8007->80/tcp                                                                                          webstatus
+d7f4d5f85b1d   mcr.microsoft.com/mssql/server:2017-latest            "/opt/mssql/bin/nonr…"   4 days ago   Up 12 hours         0.0.0.0:1433->1433/tcp                                                                                        orderdb
+b64fe4cb200f   postgres                                              "docker-entrypoint.s…"   4 days ago   Up 4 days           0.0.0.0:5432->5432/tcp                                                                                        discountdb
+
+C:\Users\upadh>docker stop 1aab200ad44e
+1aab200ad44e
+
+C:\Users\upadh>docker rm 1aab200ad44e
+1aab200ad44e
+
+C:\Users\upadh>docker stop 5bb4f8c6e566
+5bb4f8c6e566
+
+C:\Users\upadh>docker rm 5bb4
+5bb4
+
+C:\Users\upadh>docker stop 1c4d
+1c4d
+
+C:\Users\upadh>docker rm 1c4d
+1c4d
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED      STATUS         PORTS                                                                                                         NAMES
+33d3022ac931   basketapi                                             "dotnet Basket.API.d…"   4 days ago   Up 4 days      0.0.0.0:8001->80/tcp                                                                                          basket.api
+b1180d4afefe   docker.elastic.co/kibana/kibana:7.9.2                 "/usr/local/bin/dumb…"   4 days ago   Up 4 days      0.0.0.0:5601->5601/tcp                                                                                        kibana
+6196284b49b8   discountgrpc                                          "dotnet Discount.Grp…"   4 days ago   Up 4 days      0.0.0.0:8003->80/tcp                                                                                          discount.grpc
+625d1e0573bf   discountapi                                           "dotnet Discount.API…"   4 days ago   Up 4 days      0.0.0.0:8002->80/tcp                                                                                          discount.api
+dc7db931c663   dpage/pgadmin4                                        "/entrypoint.sh"         4 days ago   Up 4 days      443/tcp, 0.0.0.0:5050->80/tcp                                                                                 pgadmin
+3c31401bf1f7   redis:alpine                                          "docker-entrypoint.s…"   4 days ago   Up 4 days      0.0.0.0:6379->6379/tcp                                                                                        basketdb
+c50e20aad7c9   portainer/portainer-ce                                "/portainer"             4 days ago   Up 3 minutes   0.0.0.0:9000->9000/tcp, 9443/tcp, 0.0.0.0:8080->8000/tcp                                                      portainer
+b9774db093bf   rabbitmq:3-management-alpine                          "docker-entrypoint.s…"   4 days ago   Up 4 days      4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp   rabbitmq
+7a5b2298aa87   docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   4 days ago   Up 4 days      0.0.0.0:9200->9200/tcp, 9300/tcp                                                                              elasticsearch
+2ee02c6cb8a0   webstatus                                             "dotnet WebStatus.dll"   4 days ago   Up 4 days      0.0.0.0:8007->80/tcp                                                                                          webstatus
+d7f4d5f85b1d   mcr.microsoft.com/mssql/server:2017-latest            "/opt/mssql/bin/nonr…"   4 days ago   Up 12 hours    0.0.0.0:1433->1433/tcp                                                                                        orderdb
+b64fe4cb200f   postgres                                              "docker-entrypoint.s…"   4 days ago   Up 4 days      0.0.0.0:5432->5432/tcp                                                                                        discountdb
+
+C:\Users\upadh>docker rm 33d3
+Error response from daemon: You cannot remove a running container 33d3022ac931fffa5b2d63602cc8f6298aed191b32b8a603e73bc8ef449d4bef. Stop the container before attempting removal or force remove
+
+C:\Users\upadh>docker stop 33d3
+33d3
+
+C:\Users\upadh>docker rm 33d3
+33d3
+
+C:\Users\upadh>docker stop b118
+b118
+
+C:\Users\upadh>docker rm b118
+b118
+
+C:\Users\upadh>docker stop 6196
+6196
+
+C:\Users\upadh>docker rm 6196
+6196
+
+C:\Users\upadh>docker stop 625d1e0573bf
+625d1e0573bf
+
+C:\Users\upadh>docker rm 625d1e0573bf
+625d1e0573bf
+
+C:\Users\upadh>docker stop dc7db931c663
+dc7db931c663
+
+C:\Users\upadh>docker rm dc7db931c663
+dc7db931c663
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED      STATUS              PORTS                                                                                                         NAMES
+3c31401bf1f7   redis:alpine                                          "docker-entrypoint.s…"   4 days ago   Up 4 days           0.0.0.0:6379->6379/tcp                                                                                        basketdb
+c50e20aad7c9   portainer/portainer-ce                                "/portainer"             4 days ago   Up About a minute   0.0.0.0:9000->9000/tcp, 9443/tcp, 0.0.0.0:8080->8000/tcp                                                      portainer
+b9774db093bf   rabbitmq:3-management-alpine                          "docker-entrypoint.s…"   4 days ago   Up 4 days           4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp   rabbitmq
+7a5b2298aa87   docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   4 days ago   Up 4 days           0.0.0.0:9200->9200/tcp, 9300/tcp                                                                              elasticsearch
+2ee02c6cb8a0   webstatus                                             "dotnet WebStatus.dll"   4 days ago   Up 4 days           0.0.0.0:8007->80/tcp                                                                                          webstatus
+d7f4d5f85b1d   mcr.microsoft.com/mssql/server:2017-latest            "/opt/mssql/bin/nonr…"   4 days ago   Up 12 hours         0.0.0.0:1433->1433/tcp                                                                                        orderdb
+b64fe4cb200f   postgres                                              "docker-entrypoint.s…"   4 days ago   Up 4 days           0.0.0.0:5432->5432/tcp                                                                                        discountdb
+
+C:\Users\upadh>docker stop 3c31401bf1f7
+3c31401bf1f7
+
+C:\Users\upadh>docker rm 3c31401bf1f7
+3c31401bf1f7
+
+C:\Users\upadh>docker stop c50e20aad7c9
+c50e20aad7c9
+
+C:\Users\upadh>docker rm c50e20aad7c9
+c50e20aad7c9
+
+C:\Users\upadh>docker stop b9774db093bf
+b9774db093bf
+
+C:\Users\upadh>docker rm b9774db093bf
+b9774db093bf
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED      STATUS        PORTS                              NAMES
+7a5b2298aa87   docker.elastic.co/elasticsearch/elasticsearch:7.9.2   "/tini -- /usr/local…"   4 days ago   Up 4 days     0.0.0.0:9200->9200/tcp, 9300/tcp   elasticsearch
+2ee02c6cb8a0   webstatus                                             "dotnet WebStatus.dll"   4 days ago   Up 4 days     0.0.0.0:8007->80/tcp               webstatus
+d7f4d5f85b1d   mcr.microsoft.com/mssql/server:2017-latest            "/opt/mssql/bin/nonr…"   4 days ago   Up 12 hours   0.0.0.0:1433->1433/tcp             orderdb
+b64fe4cb200f   postgres                                              "docker-entrypoint.s…"   4 days ago   Up 4 days     0.0.0.0:5432->5432/tcp             discountdb
+
+C:\Users\upadh>docker stop 7a5b2298aa87
+7a5b2298aa87
+
+C:\Users\upadh>docker rm 7a5b2298aa87
+7a5b2298aa87
+
+C:\Users\upadh>docker stop 2ee02c6cb8a0
+2ee02c6cb8a0
+
+C:\Users\upadh>docker rm 2ee02c6cb8a0
+2ee02c6cb8a0
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED      STATUS        PORTS                    NAMES
+d7f4d5f85b1d   mcr.microsoft.com/mssql/server:2017-latest   "/opt/mssql/bin/nonr…"   4 days ago   Up 12 hours   0.0.0.0:1433->1433/tcp   orderdb
+b64fe4cb200f   postgres                                     "docker-entrypoint.s…"   4 days ago   Up 4 days     0.0.0.0:5432->5432/tcp   discountdb
+
+C:\Users\upadh>docker stop d7f4 b64f
+d7f4
+b64f
+
+C:\Users\upadh>docker rm d7f4 b64f
+d7f4
+b64f
+
+C:\Users\upadh>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\upadh>docker images
+REPOSITORY                                      TAG                   IMAGE ID       CREATED         SIZE
+orderingapi                                     latest                581755dc8492   4 days ago      231MB
+basketapi                                       latest                32986065f36d   4 days ago      220MB
+discountgrpc                                    latest                17e9cb60d94b   4 days ago      210MB
+aspnetrunbasics                                 latest                aa3e096dd8f9   4 days ago      212MB
+webstatus                                       latest                1f0310de66d5   4 days ago      240MB
+catalogapi                                      latest                713d1cfc4ce9   4 days ago      218MB
+shoppingaggregator                              latest                08ead9c5d1dc   4 days ago      213MB
+discountapi                                     latest                d75dd2eaf0ce   4 days ago      215MB
+ocelotapigw                                     latest                3a15fb5d3a87   4 days ago      209MB
+catalogapi                                      dev                   5e9c2d2e31d8   4 days ago      205MB
+mongo                                           latest                ee13a1eacac9   7 days ago      696MB
+rabbitmq                                        3-management-alpine   40c52edd5e6b   7 days ago      177MB
+postgres                                        latest                07e2ee723e2d   10 days ago     374MB
+mcr.microsoft.com/dotnet/aspnet                 5.0                   b9d26546b7c7   3 weeks ago     205MB
+docker101tutorial                               latest                0bec807a0c82   3 weeks ago     28.5MB
+dpage/pgadmin4                                  latest                b19921dd09db   4 weeks ago     270MB
+portainer/portainer-ce                          latest                0df02179156a   5 weeks ago     273MB
+redis                                           alpine                3900abf41552   6 weeks ago     32.4MB
+alpine/git                                      latest                c6b70534b534   7 weeks ago     27.4MB
+mcr.microsoft.com/mssql/server                  2017-latest           47e4878b6374   2 months ago    1.42GB
+docker.elastic.co/kibana/kibana                 7.9.2                 ba296c26886a   15 months ago   1.18GB
+docker.elastic.co/elasticsearch/elasticsearch   7.9.2                 caa7a21ca06e   15 months ago   763MB
+
+C:\Users\upadh>docker rmi 5851 3298 17e9 aa3e
+Untagged: basketapi:latest
+Deleted: sha256:32986065f36d62c316831598b8267a9c0f599c9b5702310e1186e57b56f676b6
+Untagged: discountgrpc:latest
+Deleted: sha256:17e9cb60d94b81e6fe0a933e6846191e3ccb88611131ca65f62b185ef832d6a1
+Untagged: aspnetrunbasics:latest
+Deleted: sha256:aa3e096dd8f9b7614927c13cbc0d0f6a9043dcee52106a498c40a78260e4508b
+Error: No such image: 5851
+
+C:\Users\upadh>docker images
+REPOSITORY                                      TAG                   IMAGE ID       CREATED         SIZE
+orderingapi                                     latest                581755dc8492   4 days ago      231MB
+webstatus                                       latest                1f0310de66d5   4 days ago      240MB
+catalogapi                                      latest                713d1cfc4ce9   4 days ago      218MB
+shoppingaggregator                              latest                08ead9c5d1dc   4 days ago      213MB
+discountapi                                     latest                d75dd2eaf0ce   4 days ago      215MB
+ocelotapigw                                     latest                3a15fb5d3a87   4 days ago      209MB
+catalogapi                                      dev                   5e9c2d2e31d8   4 days ago      205MB
+mongo                                           latest                ee13a1eacac9   7 days ago      696MB
+rabbitmq                                        3-management-alpine   40c52edd5e6b   7 days ago      177MB
+postgres                                        latest                07e2ee723e2d   10 days ago     374MB
+mcr.microsoft.com/dotnet/aspnet                 5.0                   b9d26546b7c7   3 weeks ago     205MB
+docker101tutorial                               latest                0bec807a0c82   3 weeks ago     28.5MB
+dpage/pgadmin4                                  latest                b19921dd09db   4 weeks ago     270MB
+portainer/portainer-ce                          latest                0df02179156a   5 weeks ago     273MB
+redis                                           alpine                3900abf41552   6 weeks ago     32.4MB
+alpine/git                                      latest                c6b70534b534   7 weeks ago     27.4MB
+mcr.microsoft.com/mssql/server                  2017-latest           47e4878b6374   2 months ago    1.42GB
+docker.elastic.co/kibana/kibana                 7.9.2                 ba296c26886a   15 months ago   1.18GB
+docker.elastic.co/elasticsearch/elasticsearch   7.9.2                 caa7a21ca06e   15 months ago   763MB
+
+C:\Users\upadh>docker rmi 5817 1f03 713d 08ea d75d
+Untagged: orderingapi:latest
+Deleted: sha256:581755dc84922b82cbd4a42b4699fc1a7c2fe90410196ba4a29daa9fead2bed0
+Untagged: webstatus:latest
+Deleted: sha256:1f0310de66d573a9beb579fedadda1273a25f729de38950553d6b2855f961d43
+Untagged: catalogapi:latest
+Deleted: sha256:713d1cfc4ce98d83e4c670166ad26b3edba4fb56afb6c0e5db88ec30c0b5bcbd
+Untagged: shoppingaggregator:latest
+Deleted: sha256:08ead9c5d1dcb3435122f73618664143a378f4d3d9272cd037786bf1c7ea9a4b
+Untagged: discountapi:latest
+Deleted: sha256:d75dd2eaf0ce02d86298e96049585fa133ae332e279b6ee8a55a9b3a4af3c559
+
+C:\Users\upadh>docker images
+REPOSITORY                                      TAG                   IMAGE ID       CREATED         SIZE
+ocelotapigw                                     latest                3a15fb5d3a87   4 days ago      209MB
+catalogapi                                      dev                   5e9c2d2e31d8   4 days ago      205MB
+mongo                                           latest                ee13a1eacac9   7 days ago      696MB
+rabbitmq                                        3-management-alpine   40c52edd5e6b   7 days ago      177MB
+postgres                                        latest                07e2ee723e2d   10 days ago     374MB
+mcr.microsoft.com/dotnet/aspnet                 5.0                   b9d26546b7c7   3 weeks ago     205MB
+docker101tutorial                               latest                0bec807a0c82   3 weeks ago     28.5MB
+dpage/pgadmin4                                  latest                b19921dd09db   4 weeks ago     270MB
+portainer/portainer-ce                          latest                0df02179156a   5 weeks ago     273MB
+redis                                           alpine                3900abf41552   6 weeks ago     32.4MB
+alpine/git                                      latest                c6b70534b534   7 weeks ago     27.4MB
+mcr.microsoft.com/mssql/server                  2017-latest           47e4878b6374   2 months ago    1.42GB
+docker.elastic.co/kibana/kibana                 7.9.2                 ba296c26886a   15 months ago   1.18GB
+docker.elastic.co/elasticsearch/elasticsearch   7.9.2                 caa7a21ca06e   15 months ago   763MB
+
+C:\Users\upadh>docker rmi 3a1f 5e9c ee13 40c5
+Untagged: catalogapi:dev
+Deleted: sha256:5e9c2d2e31d867842440e99bcb05aa0e2aba6130be8a0572467b81364285feca
+Untagged: mongo:latest
+Untagged: mongo@sha256:0305e68a63b620995d239ad72aac7c15df4d5dab3c81b18c438364ced291cf82
+Untagged: mongo@sha256:6743836d42756b2ae50549b2eb4585c688fce81a243cedd152b56266c2fb3d17
+Deleted: sha256:ee13a1eacac90d5d727748ea5c2a8bfaf8b52393f0b12891d349cfb19c7060d0
+Deleted: sha256:d2919381c461e135a511c8d233130066b9b8fa5db802da1c5e3699af11ee2bb1
+Deleted: sha256:52925cc73db417d7d30c94f01bbde6384bb41b824e8cd50a1ea7041679b3721b
+Deleted: sha256:2d9628ffa2fd64f969bfcc51ba812a26711e75b66ba116a7dc92142afd482e53
+Deleted: sha256:f3a5b5161b6d5535f7ab753740d655de4df2505c70252ec427ed73b3fe35b08c
+Deleted: sha256:dd0cf861d968746acf0dc206e25c2d27f60153c14a397dcae91e3afbd646ade6
+Deleted: sha256:1d3c889acbfc5840548f02adf5c49057c9470ec274223408cbf31239124ffbc3
+Deleted: sha256:c0494636ffd31a37963bcb2f1671ad1f9c2d9965de2708b5263d424cc760ca3c
+Deleted: sha256:795ff83d41c5e34bf7508ef4e967b2c33ce5292c8c89464f63552c3e9852e1b2
+Deleted: sha256:1d609ccaa4fe8d10269ce9683cbd4bd352d4e979333a86f46bb25bf2708566a0
+Deleted: sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24
+Untagged: rabbitmq:3-management-alpine
+Untagged: rabbitmq@sha256:bd835fe9dba5abda407b2792378280151cffd1bedffc2a6cdb9ac71fd0ddd069
+Deleted: sha256:40c52edd5e6bbafbf0275d1e034403954faaafdba2273ecb2227135f1ad4c47c
+Deleted: sha256:1134f0a05d8c7153ae7452e2582c3ebdde832faec2006bb61e3b153c02ba36d1
+Deleted: sha256:fafebcd69cf1ca3864a6f8274cd4e8ab77901b04f41b2e99b339cf6cb6daf786
+Deleted: sha256:1d12595cde6981d316b9f7a47094039873c4f26d1183647ea9988d92da4bf8d2
+Deleted: sha256:a2885f1a31122c72cf4ca7c05e1f5d42824e2d6995ab1b455434957c0a8ec56f
+Deleted: sha256:76d8d63e969a3ab7bd76d06a8461cc1b5867f57aadeb1ace366be7ae1d92a5c6
+Deleted: sha256:d8b41e02e60d09d76537c34cc0ed4cdbb5d4ad19e90a4d609e8c689b1e181863
+Deleted: sha256:c7f2328016f47e068ae62c31371ffefa6797490e1076d1c5c185b6cc1440bb8d
+Deleted: sha256:cf448b8e57ce0e30ae40799bb3e34107e927e920a9a1daafa4cfd35f8bb0c0b0
+Deleted: sha256:cc42999f9e49e20650e55e8aac15a1ac10d6d0335225fe350d5de9d8bbdc9148
+Error: No such image: 3a1f
+
+C:\Users\upadh>docker rmi 3a15
+Untagged: ocelotapigw:latest
+Deleted: sha256:3a15fb5d3a87f3e930b07a082bc6140bcc7d9a10a7753e01779601dfdec68cca
+
+C:\Users\upadh>docker images
+REPOSITORY                                      TAG           IMAGE ID       CREATED         SIZE
+postgres                                        latest        07e2ee723e2d   10 days ago     374MB
+mcr.microsoft.com/dotnet/aspnet                 5.0           b9d26546b7c7   3 weeks ago     205MB
+docker101tutorial                               latest        0bec807a0c82   3 weeks ago     28.5MB
+dpage/pgadmin4                                  latest        b19921dd09db   4 weeks ago     270MB
+portainer/portainer-ce                          latest        0df02179156a   5 weeks ago     273MB
+redis                                           alpine        3900abf41552   6 weeks ago     32.4MB
+alpine/git                                      latest        c6b70534b534   7 weeks ago     27.4MB
+mcr.microsoft.com/mssql/server                  2017-latest   47e4878b6374   2 months ago    1.42GB
+docker.elastic.co/kibana/kibana                 7.9.2         ba296c26886a   15 months ago   1.18GB
+docker.elastic.co/elasticsearch/elasticsearch   7.9.2         caa7a21ca06e   15 months ago   763MB
+
+C:\Users\upadh>docker rmi 5817 07e2 b9d2 0bec b199
+Untagged: postgres:latest
+Untagged: postgres@sha256:f329d076a8806c0ce014ce5e554ca70f4ae9407a16bb03baa7fef287ee6371f1
+Deleted: sha256:07e2ee723e2d9c8c141137bf9de1037fd2494248e13da2805a95ad840f61dd6c
+Deleted: sha256:e459411c3aa0d44d01f53ae5fef863adb249119682723ade875cbd54e5a2d364
+Deleted: sha256:d3b2a99d31ee057e60b13daf038f515d99ef193cd8afc758e24c5254656e717d
+Deleted: sha256:17dcbb9abca58f6740c02ca9ec7b2e65391d04d805cc6d7a9895e90bf35276fa
+Deleted: sha256:e3a7df23e4654c3395c6aadd2cbac6d154c5057ad5fd53404069fc95e34b97df
+Deleted: sha256:dd9af095c8a916eb52882487f7592fb6d0a49efa73609d2fc6970b9e3d30b6c0
+Deleted: sha256:d5068f36382ce608820e5e1c9c741d21484bc1c5f446f03bd9811ddee05d5378
+Deleted: sha256:507a71212a42d1657cff0f73bddce282245699a455093332323eb820dc227839
+Deleted: sha256:816b3f42ec4ef1918959fd2709c2e1385882495953d27f91be3a34e31f6d23f9
+Deleted: sha256:54211fd8b3e5179a350f4251bb33c425fb3ff2a002f0ddfe7d0c7a42f7e67e9f
+Deleted: sha256:3ec81cc37ff5f9c92bc264581fd5f27159beb85fa23208ddf0df58ae0bb15394
+Deleted: sha256:9bbe8a9f7ecf50e0d70c69e29bc798ff882bb526bbd2c2f1c4ccf8c96bf003d2
+Deleted: sha256:d103d6bbee1b53d900b3acdfdea1929421ae2307adeb7ede4fe3833c1223de87
+Deleted: sha256:2edcec3590a4ec7f40cf0743c15d78fb39d8326bc029073b41ef9727da6c851f
+Untagged: mcr.microsoft.com/dotnet/aspnet:5.0
+Untagged: mcr.microsoft.com/dotnet/aspnet@sha256:3c975b9137429026029b292b712965f29719d02b9b62796fed4d78b5d18ea048
+Deleted: sha256:b9d26546b7c7dc81dfd7f26d66c849742dc25ebaa62033437af584e1d4d039c2
+Untagged: dpage/pgadmin4:latest
+Untagged: dpage/pgadmin4@sha256:9e0204e13c0864488f5cf9f075f741098a4c59923afa9ae5e7e2904c23eabcf0
+Deleted: sha256:b19921dd09db2f05588a93191ea1020a0f9f866e70b2d729eb5442cf10dd6cf9
+Deleted: sha256:493cc28121cc469e345121536d1f684d83853c6a881f1b0ae63b52c21a5a4457
+Deleted: sha256:438a36e3020890f1eed5047e7551a044eb0e3b3803a52effbfe9e6df08c33640
+Deleted: sha256:2215ed1d2c9c5149c20a308f0b7870a2dfb08373cf8aea987896f11efa3cf746
+Deleted: sha256:2a9c973104858851404cb400c131b99e09231e3e7bfa8e7fa4c9509aab73b2f0
+Deleted: sha256:aaa29e272d86263625207a2a8d137c139f1e988b4472b677e99a2c4825955ba1
+Deleted: sha256:fb524ca8ac67b4699d43dafaa8c4b5675193b82c2075a8295c237d468713882c
+Deleted: sha256:95009f722298c0fdb8e4f01a1731620146e09c16a6165a1e87cf818c6a7f71c3
+Deleted: sha256:45654881256064ff2314e57ce5325fafbb86f3096f684dfcd226b1a3b3ec5673
+Deleted: sha256:5a9eb97f7a9f6d347fddc9301b2b3253784db8374c0127f7016f19069f70e341
+Deleted: sha256:97fa3786d977b2ec9961090d00291f9e8ab6d0706af2ceb68bf1b193555baa30
+Deleted: sha256:e67d73a43890797dff509a6dcac81cee857e3d709428af552ed5a2d34f641ecc
+Deleted: sha256:967d0511d18bbdde7bffa3657336fe36c1dfa59803697a26bfb77a57f4ae5165
+Deleted: sha256:668566dac1f669f50949c2e8b10647be570b5fd0badd1c3f6561e88495053cab
+Error: No such image: 5817
+Error response from daemon: conflict: unable to delete 0bec807a0c82 (must be forced) - image is being used by stopped container a2d60ff36944
+
+C:\Users\upadh>docker images
+REPOSITORY                                      TAG           IMAGE ID       CREATED         SIZE
+docker101tutorial                               latest        0bec807a0c82   3 weeks ago     28.5MB
+portainer/portainer-ce                          latest        0df02179156a   5 weeks ago     273MB
+redis                                           alpine        3900abf41552   6 weeks ago     32.4MB
+alpine/git                                      latest        c6b70534b534   7 weeks ago     27.4MB
+mcr.microsoft.com/mssql/server                  2017-latest   47e4878b6374   2 months ago    1.42GB
+docker.elastic.co/kibana/kibana                 7.9.2         ba296c26886a   15 months ago   1.18GB
+docker.elastic.co/elasticsearch/elasticsearch   7.9.2         caa7a21ca06e   15 months ago   763MB
+
+C:\Users\upadh>docker rmi caa7 ba29 47e4 3900
+Untagged: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+Untagged: docker.elastic.co/elasticsearch/elasticsearch@sha256:2be3302537236874fdeca184c78a49aed17d5aca0f8fc3f6192a80e93e817cb4
+Deleted: sha256:caa7a21ca06ea2376dc2a2b3194795def7bed7cc1a4de18feee0a706518d2c39
+Deleted: sha256:4bf151b04be680c4dae18e0ea54d88f987023da3ca41666a62e93a9c126ba270
+Deleted: sha256:0155cd667145f16aa7f079d1a4a9688f6406495d6e5d3cc372a208d288dd733a
+Deleted: sha256:136ad0b8403c7f848ec7648e106f51a76ba6d2ad5d22c759dcdbca437c55d250
+Deleted: sha256:1812f6a2b9387443ad83df7e661fc1c547f89e4ff26d4dceecf069fba06de383
+Deleted: sha256:c75a835e40e0b25d0246c91cc814f64483730109f00e5f5d92d145bbdf9487e3
+Deleted: sha256:44c39170d25b22f58a8580a0240e7f1443e9a8277a52924f456575e9437a88c4
+Deleted: sha256:974b2c8a745618e75760df77fd5097212212cce842d16f45d790f59b577d561f
+Deleted: sha256:ab847a09e42a3d183f748d6e82c8cabec8cdc02712dc493687dc6f734c9411b5
+Untagged: docker.elastic.co/kibana/kibana:7.9.2
+Untagged: docker.elastic.co/kibana/kibana@sha256:48d7d2e91b7903321748432e22a01576c7e4db539021836b54bd58d5659aa5e5
+Deleted: sha256:ba296c26886ae230d296b742f1fdc6042a675283daaea616361c571df5542c93
+Deleted: sha256:04aa9617bf02d6f36faac3a2a12df3e69b113ba6557a0a32f04268cdf9591359
+Deleted: sha256:e566bb112c74ebd38f19a48c63eab09073f1d9bff52e1c751b588b4d163a011c
+Deleted: sha256:e9165000e55c80a6026d6b69644441e9769333d6a4f54b1e83525ccef802eac4
+Deleted: sha256:6c440abd26ff999fc55060dab9a5a848508cc40fa27427fef14d62ba59950fc1
+Deleted: sha256:4084ac3d0f7e3337542b27ceed8c10c48a4d60002fab3060aa7bc4cc31114b73
+Deleted: sha256:eb0c5dc8586fd6dec3caa86bdfb5c966d922d9cc7e684366dde82cebb75bbe72
+Deleted: sha256:a63c079966d476c38810ae075adebd8bf6a5412c3c4ec6f640e85c977e8754ab
+Deleted: sha256:34aa8b4c4cd1727c9068378fba0f9710a932df76e10176feaa0be95b51cc1da4
+Deleted: sha256:c2cb3f7821bdbb9b57bca43fb160ff5de308ce2dd617fdb762e411726236e5af
+Deleted: sha256:f383941929e6ac112e76f26dc860d72d5cedf161c56fabbd4caeb1f19f62bf05
+Deleted: sha256:613be09ab3c0860a5216936f412f09927947012f86bfa89b263dfa087a725f81
+Untagged: mcr.microsoft.com/mssql/server:2017-latest
+Untagged: mcr.microsoft.com/mssql/server@sha256:7fadc7fbbf5b120535485487477beba5230c5d8b286048d61a816249bb651ff0
+Deleted: sha256:47e4878b63746ba0df141688cce41aec224bd0d932ac073a0e04aba942b2bb4a
+Deleted: sha256:fdde47bafc60b9d1991d6ec1c91b00d12730019f38266f0e6d31de79735791f1
+Deleted: sha256:4f8d38a1a2733a46fa5b0852f9afe95ff16b0c8129626a81eeeb11a0a2a94602
+Deleted: sha256:33948125d5cb46b0a606f5ff284671c0415c489cc95ed938cc69f3d9c06fc0ef
+Deleted: sha256:0654cdeca85a6cc87f181a60b16068d82e194d4b0d4d52be3f705e6544590488
+Deleted: sha256:0214f4b057d78b44fd12702828152f67c0ce115f9346acc63acdf997cab7e7c8
+Deleted: sha256:1b9d0485372c5562fa614d5b35766f6c442539bcee9825a6e90d1158c3299a61
+Deleted: sha256:3c0f34be6eb98057c607b9080237cce0be0b86f52d51ba620dc018a3d421baea
+Deleted: sha256:be96a3f634de79f523f07c7e4e0216c28af45eb5776e7a6238a2392f71e01069
+Untagged: redis:alpine
+Untagged: redis@sha256:4bed291aa5efb9f0d77b76ff7d4ab71eee410962965d052552db1fb80576431d
+Deleted: sha256:3900abf4155226f3f62401054b872ce0c85b5c3b47275cae3d16a39c8646e36b
+Deleted: sha256:8ba2d28fdd3729dec59c7e11c3c99b5df826f7d4fc63c358ae54833e27a16e92
+Deleted: sha256:ac67f1fe36425abcd34a6fc9489f0433413fcf617b59be6acf2b5f275b7c59bf
+Deleted: sha256:e0df7592e32b165ebedad9f3397fe1be316374758ab1683286da78644090027c
+Deleted: sha256:7c2a0a7f6e12aabede137ef101382ba5f0b431ad5d68df62de89a9fc616ebc7a
+Deleted: sha256:d41cbac87d9821a0752f769743c775c1b05f3dc763192ab294945941410e9195
+
+C:\Users\upadh>docker images
+REPOSITORY               TAG       IMAGE ID       CREATED       SIZE
+docker101tutorial        latest    0bec807a0c82   3 weeks ago   28.5MB
+portainer/portainer-ce   latest    0df02179156a   5 weeks ago   273MB
+alpine/git               latest    c6b70534b534   7 weeks ago   27.4MB
+
+C:\Users\upadh>docker rmi 0df0
+Untagged: portainer/portainer-ce:latest
+Untagged: portainer/portainer-ce@sha256:4f126c5114b63e9d1bceb4b368944d14323329a9a0d4e7bb7eb53c9b7435d498
+Deleted: sha256:0df02179156afbf727443d0be50e8b9cdab8c044050691517539cea2e3ed01fd
+Deleted: sha256:d53ad0c7313da0651629c5db8561ac6f4c2dae978a92dc298973ce95348fd1f1
+Deleted: sha256:f3541f8823d69fbb4d62a52e644cc3bb960c12899eacc52481580980cb2b634c
+Deleted: sha256:7e3de9917967d34d5d2d0902f3909f9773c928e86dc40cdcced2cad71f56d5e0
+
+C:\Users\upadh>docker images
+REPOSITORY          TAG       IMAGE ID       CREATED       SIZE
+docker101tutorial   latest    0bec807a0c82   3 weeks ago   28.5MB
+alpine/git          latest    c6b70534b534   7 weeks ago   27.4MB
+
+C:\Users\upadh>
