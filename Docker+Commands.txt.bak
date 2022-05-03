@@ -20,8 +20,6 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
 
 2
 
-docker run -d -p 27017:27017 --name shopping-mongo mongo
-
 DOCKER REMOVE ALL CONTAINER IMAGES PS -A
 
 POWERSHELL commands
